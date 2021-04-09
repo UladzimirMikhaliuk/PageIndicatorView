@@ -6,6 +6,8 @@ import com.rd.draw.data.Indicator;
 
 class BaseDrawer {
 
+    protected float divider = 8;
+
     Paint paint;
     Indicator indicator;
 

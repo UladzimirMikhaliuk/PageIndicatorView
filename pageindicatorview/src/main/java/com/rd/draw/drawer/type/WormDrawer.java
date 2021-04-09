@@ -39,20 +39,20 @@ public class WormDrawer extends BaseDrawer {
         if (indicator.getOrientation() == Orientation.HORIZONTAL) {
             rect.left = rectStart;
             rect.right = rectEnd;
-            rect.top = coordinateY - radius;
-            rect.bottom = coordinateY + radius;
+            rect.top = coordinateY - radius / divider;
+            rect.bottom = coordinateY + radius / divider;
 
         } else {
-            rect.left = coordinateX - radius;
-            rect.right = coordinateX + radius;
+            rect.left = coordinateX - radius / divider;
+            rect.right = coordinateX + radius / divider;
             rect.top = rectStart;
             rect.bottom = rectEnd;
         }
 
         paint.setColor(unselectedColor);
-        canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+        canvas.drawRect(coordinateX - radius, coordinateY - radius / divider, coordinateX + radius, coordinateY + radius / divider,  paint);
 
         paint.setColor(selectedColor);
-        canvas.drawRoundRect(rect, radius, radius, paint);
+        canvas.drawRect(rect, paint);
     }
 }
