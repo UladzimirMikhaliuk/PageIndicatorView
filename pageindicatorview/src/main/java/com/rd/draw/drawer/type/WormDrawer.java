@@ -50,6 +50,8 @@ public class WormDrawer extends BaseDrawer {
         }
 
         paint.setColor(unselectedColor);
+        float divider = this.divider;
+        divider = divider / 2f;
         canvas.drawRect(coordinateX - radius, coordinateY - radius / divider, coordinateX + radius, coordinateY + radius / divider,  paint);
 
         paint.setColor(selectedColor);
