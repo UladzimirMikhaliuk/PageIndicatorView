@@ -45,6 +45,7 @@ public class BasicDrawer extends BaseDrawer {
         int color = unselectedColor;
         if (position == selectedPosition) {
             color = selectedColor;
+            divider = divider / 1.5F;
         }
 
         Paint paint;
