@@ -42,10 +42,13 @@ public class BasicDrawer extends BaseDrawer {
 			radius *= scaleFactor;
 		}
 
+		float divider = this.divider;
+
         int color = unselectedColor;
         if (position == selectedPosition) {
             color = selectedColor;
-            divider = divider / 1.5F;
+        } else {
+            divider = divider / 1.5f;
         }
 
         Paint paint;
