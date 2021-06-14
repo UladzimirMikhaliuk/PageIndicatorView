@@ -2,7 +2,11 @@ package com.rd.draw.drawer.type;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.os.Build;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+
 import com.rd.animation.type.AnimationType;
 import com.rd.draw.data.Indicator;
 
@@ -19,6 +23,7 @@ public class BasicDrawer extends BaseDrawer {
         strokePaint.setStrokeWidth(indicator.getStroke());
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void draw(
             @NonNull Canvas canvas,
             int position,
@@ -55,6 +60,7 @@ public class BasicDrawer extends BaseDrawer {
             paint = this.paint;
         }
 
+        paint.setStyle(Paint.Style.STROKE);
         paint.setColor(color);
         canvas.drawOval(coordinateX - radius, coordinateY - radius, coordinateX + radius, coordinateY + radius, paint);
 
