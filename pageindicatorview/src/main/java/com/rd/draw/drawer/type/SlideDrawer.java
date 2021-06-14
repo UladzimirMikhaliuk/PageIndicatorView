@@ -44,6 +44,6 @@ public class SlideDrawer extends BaseDrawer {
         paint.setColor(unselectedColor);
         paint.setStrokeWidth(strokeWidth);
         paint.setStyle(Paint.Style.STROKE);
-        canvas.drawCircle(coordinateX - strokeWidth , coordinateY - strokeWidth , radius - strokeWidth / 2, paint);
+        canvas.drawCircle(coordinateX + strokeWidth , coordinateY + strokeWidth , radius - strokeWidth / 2, paint);
     }
 }
