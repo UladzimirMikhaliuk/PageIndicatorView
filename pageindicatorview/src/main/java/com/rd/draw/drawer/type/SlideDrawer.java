@@ -42,7 +42,7 @@ public class SlideDrawer extends BaseDrawer {
         paint.setColor(unselectedColor);
         paint.setStrokeWidth(2f);
         paint.setStyle(Paint.Style.STROKE);
-        canvas.drawOval(coordinateX - radius, coordinateY - radius, coordinateX + radius, coordinateY + radius, paint);
+        canvas.drawOval(coordinateX - radius - 1, coordinateY - radius - 1, coordinateX + radius - 1, coordinateY + radius - 1, paint);
 
     }
 }
