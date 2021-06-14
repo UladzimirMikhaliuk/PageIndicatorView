@@ -33,9 +33,9 @@ public class SlideDrawer extends BaseDrawer {
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(selectedColor);
         if (indicator.getOrientation() == Orientation.HORIZONTAL) {
-            canvas.drawCircle(coordinateX - 1f, coordinateY -1f, radius - 1f, paint);
+            canvas.drawCircle(coordinate, coordinateY, radius, paint);
         } else {
-            canvas.drawCircle(coordinateX - 1f, coordinateY -1f, radius - 1f, paint);
+            canvas.drawCircle(coordinateX, coordinate, radius, paint);
         }
 
 
