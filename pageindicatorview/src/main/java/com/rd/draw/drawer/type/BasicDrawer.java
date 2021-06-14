@@ -56,6 +56,7 @@ public class BasicDrawer extends BaseDrawer {
         }
 
         paint.setColor(color);
-        canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+        canvas.drawOval(coordinateX - radius, coordinateY - radius, coordinateX + radius, coordinateY + radius, paint);
+
     }
 }
