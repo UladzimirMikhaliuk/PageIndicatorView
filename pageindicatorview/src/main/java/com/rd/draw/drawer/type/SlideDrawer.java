@@ -41,6 +41,7 @@ public class SlideDrawer extends BaseDrawer {
 
         paint.setColor(unselectedColor);
         paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(50f);
         canvas.drawOval(coordinateX - radius, coordinateY - radius, coordinateX + radius, coordinateY + radius, paint);
 
     }
