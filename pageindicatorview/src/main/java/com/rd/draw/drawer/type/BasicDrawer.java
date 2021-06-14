@@ -55,7 +55,7 @@ public class BasicDrawer extends BaseDrawer {
         Paint paint;
         if (animationType == AnimationType.FILL && position != selectedPosition) {
             paint = strokePaint;
-            paint.setStrokeWidth(5f);
+            paint.setStrokeWidth(strokePx);
         } else {
             paint = this.paint;
         }
