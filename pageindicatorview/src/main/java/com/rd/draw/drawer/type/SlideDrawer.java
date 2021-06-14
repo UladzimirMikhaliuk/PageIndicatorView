@@ -33,16 +33,15 @@ public class SlideDrawer extends BaseDrawer {
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(selectedColor);
         if (indicator.getOrientation() == Orientation.HORIZONTAL) {
-            canvas.drawCircle(coordinate, coordinateY, radius, paint);
+            canvas.drawCircle(coordinateX - 1f, coordinateY -1f, radius - 1f, paint);
         } else {
-            canvas.drawCircle(coordinateX, coordinate, radius, paint);
+            canvas.drawCircle(coordinateX - 1f, coordinateY -1f, radius - 1f, paint);
         }
 
 
         paint.setColor(unselectedColor);
         paint.setStrokeWidth(2f);
         paint.setStyle(Paint.Style.STROKE);
-        canvas.drawOval(coordinateX - radius - 1, coordinateY - radius - 1, coordinateX + radius - 1, coordinateY + radius - 1, paint);
-
+        canvas.drawCircle(coordinateX - 1f, coordinateY -1f, radius - 1f, paint);
     }
 }

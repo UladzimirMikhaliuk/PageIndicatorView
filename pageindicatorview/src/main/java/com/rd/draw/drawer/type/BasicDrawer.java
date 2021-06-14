@@ -62,6 +62,6 @@ public class BasicDrawer extends BaseDrawer {
         paint.setStrokeWidth(2f);
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(color);
-        canvas.drawCircle(coordinateX, coordinateY, radius - 1f, paint);
+        canvas.drawCircle(coordinateX - 1f, coordinateY -1f, radius - 1f, paint);
     }
 }
