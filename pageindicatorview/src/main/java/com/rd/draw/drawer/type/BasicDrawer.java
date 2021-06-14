@@ -59,9 +59,11 @@ public class BasicDrawer extends BaseDrawer {
         } else {
             paint = this.paint;
         }
-        paint.setStrokeWidth(2f);
+
+        float strokeWidth = 3f;
+        paint.setStrokeWidth(strokeWidth);
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(color);
-        canvas.drawCircle(coordinateX - 1f, coordinateY -1f, radius - 1f, paint);
+        canvas.drawCircle(coordinateX - strokeWidth / 2, coordinateY - strokeWidth / 2, radius - strokeWidth / 2, paint);
     }
 }

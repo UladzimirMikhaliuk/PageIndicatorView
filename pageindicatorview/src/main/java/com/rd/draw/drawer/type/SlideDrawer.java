@@ -38,10 +38,12 @@ public class SlideDrawer extends BaseDrawer {
             canvas.drawCircle(coordinateX, coordinate, radius, paint);
         }
 
+        float strokeWidth = 3f;
+
 
         paint.setColor(unselectedColor);
-        paint.setStrokeWidth(2f);
+        paint.setStrokeWidth(strokeWidth);
         paint.setStyle(Paint.Style.STROKE);
-        canvas.drawCircle(coordinateX - 1f, coordinateY -1f, radius - 1f, paint);
+        canvas.drawCircle(coordinateX - strokeWidth / 2, coordinateY - strokeWidth / 2, radius - strokeWidth / 2, paint);
     }
 }
