@@ -60,7 +60,7 @@ public class BasicDrawer extends BaseDrawer {
             paint = this.paint;
         }
 
-        float strokeWidth = 3f;
+        float strokeWidth = 4f;
         paint.setStrokeWidth(strokeWidth);
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(color);

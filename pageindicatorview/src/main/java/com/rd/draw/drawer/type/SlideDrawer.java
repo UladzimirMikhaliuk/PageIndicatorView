@@ -38,7 +38,7 @@ public class SlideDrawer extends BaseDrawer {
             canvas.drawCircle(coordinateX, coordinate, radius, paint);
         }
 
-        float strokeWidth = 3f;
+        float strokeWidth = 4f;
 
 
         paint.setColor(unselectedColor);
