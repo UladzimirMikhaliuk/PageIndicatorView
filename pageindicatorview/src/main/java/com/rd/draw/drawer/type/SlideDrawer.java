@@ -31,7 +31,7 @@ public class SlideDrawer extends BaseDrawer {
         int radius = indicator.getRadius();
 
         paint.setColor(unselectedColor);
-        canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+        canvas.drawOval(coordinateX, coordinateY, coordinateX + 2 * radius, coordinateY + 2 * radius, paint);
 
         paint.setColor(selectedColor);
         if (indicator.getOrientation() == Orientation.HORIZONTAL) {

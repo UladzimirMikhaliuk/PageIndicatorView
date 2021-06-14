@@ -35,19 +35,16 @@ public class BasicDrawer extends BaseDrawer {
         int selectedPosition = indicator.getSelectedPosition();
         AnimationType animationType = indicator.getAnimationType();
 
-		if (animationType == AnimationType.SCALE && !isSelectedItem) {
-			radius *= scaleFactor;
+        if (animationType == AnimationType.SCALE && !isSelectedItem) {
+            radius *= scaleFactor;
 
-		} else if (animationType == AnimationType.SCALE_DOWN && isSelectedItem) {
-			radius *= scaleFactor;
-		}
-
-		float divider = this.divider;
+        } else if (animationType == AnimationType.SCALE_DOWN && isSelectedItem) {
+            radius *= scaleFactor;
+        }
 
         int color = unselectedColor;
         if (position == selectedPosition) {
             color = selectedColor;
-            divider = divider / 2f;
         }
 
         Paint paint;
@@ -59,6 +56,6 @@ public class BasicDrawer extends BaseDrawer {
         }
 
         paint.setColor(color);
-        canvas.drawRect(coordinateX - radius, coordinateY - radius / divider, coordinateX + radius, coordinateY + radius / divider,  paint);
+        canvas.drawCircle(coordinateX, coordinateY, radius, paint);
     }
 }
